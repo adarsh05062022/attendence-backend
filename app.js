@@ -34,6 +34,9 @@ app.use("/api/notification", notificationRoute);
 app.use("/api/section", sectionRoute);
 app.use("/api/subject", subjectRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
